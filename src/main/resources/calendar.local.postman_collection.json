@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "1668056d-5d43-4035-b9a6-acaff361c66e",
+		"name": "calendar.local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "user get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/users/645a280d-ac62-4844-8f43-d7e1d64c33f8",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"users",
+								"645a280d-ac62-4844-8f43-d7e1d64c33f8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/users/0",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"users",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"max\",\n    \"login\": \"max2\",\n    \"password\": \"123\",\n    \"email\": \"max123@test.com\",\n    \"timezone\": \"Europe/Moscow\",\n    \"workDayStartTime\": \"09:00:00\",\n    \"workDayEndTime\": \"18:00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/users/0fa74e64-b9f6-4120-9a5f-0f24d6ee1ff3",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"users",
+								"0fa74e64-b9f6-4120-9a5f-0f24d6ee1ff3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user patch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/users/0",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"users",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"max\",\n    \"login\": \"max2\",\n    \"password\": \"123\",\n    \"email\": \"max2@test.com\",\n    \"timezone\": \"Europe/Moscow\",\n    \"workDayStartTime\": \"09:00:00\",\n    \"workDayEndTime\": \"18:00:00\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8085/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "event",
+			"item": [
+				{
+					"name": "event get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/events/52d9e68b-5338-4984-a723-2b6eeb86385e",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"events",
+								"52d9e68b-5338-4984-a723-2b6eeb86385e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/events/0",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"events",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event patch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/events/0",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"events",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/events",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "event getAll by user and time period",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/users/0fa74e64-b9f6-4120-9a5f-0f24d6ee1ff3/events?date-time-from=2022-02-24T01:27:55&date-time-to=2022-02-24T01:28:00",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"users",
+								"0fa74e64-b9f6-4120-9a5f-0f24d6ee1ff3",
+								"events"
+							],
+							"query": [
+								{
+									"key": "date-time-from",
+									"value": "2022-02-24T01:27:55"
+								},
+								{
+									"key": "date-time-to",
+									"value": "2022-02-24T01:28:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "custom",
+			"item": [
+				{
+					"name": "nearest-free-slot",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/custom/nearest-free-slot?minDurationMinutes=1&userIdArr=645a280d-ac62-4844-8f43-d7e1d64c33f8&userIdArr=0fa74e64-b9f6-4120-9a5f-0f24d6ee1ff3",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"custom",
+								"nearest-free-slot"
+							],
+							"query": [
+								{
+									"key": "minDurationMinutes",
+									"value": "1"
+								},
+								{
+									"key": "userIdArr",
+									"value": "645a280d-ac62-4844-8f43-d7e1d64c33f8"
+								},
+								{
+									"key": "userIdArr",
+									"value": "0fa74e64-b9f6-4120-9a5f-0f24d6ee1ff3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
