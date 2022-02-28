@@ -7,6 +7,15 @@ functions:
     -Exception handing
     -DTO entities
 
-
 Tech:
-    Spring-boot, java 17, maven, Spring data (jpa, hibernate), swagger,
+Spring-boot, java 17, maven, Spring data (jpa, hibernate), swagger,
+
+Sql queries 
+    src/main/resources/sql.sql
+
+Postman config
+    src/main/resources/calendar.local.postman_collection.json
+
+
+
+
